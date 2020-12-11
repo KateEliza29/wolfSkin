@@ -1,0 +1,468 @@
+/** 
+CSS Structure
+
+1 - Page Styling + Fonts
+2 - Header
+3 - Hero 
+4 - About
+5 - Gallery 
+6 - Prices 
+7 - Contact
+8 - Footer
+
+**/
+/* Sass Variables */
+/* 1 - Page Styling, Fonts and Headings */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  background-color: #202020;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'octavio';
+  src: url("fonts/octavio.ttf");
+}
+
+@font-face {
+  font-family: 'octin-prison';
+  src: url("fonts/octin-prison.ttf");
+}
+
+h1 {
+  color: #d4d4d4;
+  font-family: octin-prison;
+  font-size: 6rem;
+  margin: 0;
+}
+
+h2 {
+  color: #d4d4d4;
+  font-family: octavio;
+  font-size: 4rem;
+  margin: 0;
+}
+
+h3 {
+  color: #d1b23e;
+  font-family: octin-prison;
+  font-size: 3rem;
+  margin: 0;
+}
+
+h4 {
+  color: #d4d4d4;
+  font-family: octavio;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+p {
+  color: #d4d4d4;
+  margin: 5px;
+}
+
+span {
+  color: #d1b23e;
+}
+
+header a {
+  font-family: octin-prison;
+  color: #d4d4d4;
+  text-decoration: none;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+header a:hover {
+  color: #d1b23e;
+}
+
+.logo {
+  width: 60px;
+  margin: 5px;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+i:hover,
+.logo:hover {
+  -webkit-animation: rotate-scale-down 0.65s linear both;
+          animation: rotate-scale-down 0.65s linear both;
+}
+
+@-webkit-keyframes rotate-scale-down {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+    transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-scale-down {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+    transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+/* 2 - Header Section */
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #202020;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+/* 3 - Hero Section */
+#hero {
+  height: 100vh;
+  width: 90vw;
+  background-image: url("images/tattoo-hands2.png");
+  background-attachment: fixed;
+  background-size: cover;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hero div {
+  margin-bottom: 40px;
+}
+
+/* 4 - About Section */
+#about {
+  width: 90vw;
+  height: 100vh;
+  margin: auto;
+  padding-top: 100px;
+  display: -ms-grid;
+  display: grid;
+  grid: 0.5fr 1fr 1fr / 1fr 1fr;
+}
+
+#about div {
+  margin: 20px;
+  padding: 20px;
+}
+
+#aboutTitle {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+#about1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+#about2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+#about3 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  border-top: #d1b23e 3px solid;
+}
+
+/* 5 - Gallery Section */
+#galleryWrapper {
+  height: 100vh;
+  padding-top: 100px;
+}
+
+#galleryWrapper h3 {
+  margin-bottom: 50px;
+}
+
+#gallery {
+  width: 90vw;
+  margin: auto;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 1fr 20px;
+      grid-template-columns: 20px 1fr 20px;
+  border-top: 1px solid #d1b23e;
+  border-bottom: 1px solid #d1b23e;
+  z-index: -1;
+}
+
+.carousel-slide {
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.carousel-slide div {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel-slide img {
+  width: 790px;
+  height: 450px;
+  border-radius: 20px;
+}
+
+.arrow-button {
+  height: 100%;
+  background-color: #d1b23e;
+  padding: 2px;
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.arrow-button:hover {
+  opacity: 1;
+}
+
+#leftArrow {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+#rightArrow {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+/* 6 - Prices Section */
+#pricesWrapper {
+  padding-top: 150px;
+}
+
+#prices {
+  width: 90vw;
+  margin: auto;
+}
+
+#prices div {
+  max-width: 300px;
+}
+
+#banner {
+  background-image: url("images/banner.jpg");
+  height: 70vh;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  margin-top: 80px;
+}
+
+/* 7 - Contact Section */
+#contactWrapper {
+  padding-top: 100px;
+  width: 90vw;
+  margin: auto;
+}
+
+#contactTitle {
+  padding-top: 50px;
+}
+
+#contact {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+#socialMedia {
+  margin: auto;
+  padding-top: 50px;
+}
+
+#socialMedia i {
+  color: #d4d4d4;
+  font-size: 3rem;
+  margin: 10px;
+}
+
+#address {
+  font-family: octavio;
+  font-size: 2rem;
+}
+
+#address i {
+  color: #d4d4d4;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/* 8 - Footer Section */
+footer {
+  background-color: #7a7b7f;
+  height: 90px;
+  font-family: octavio;
+  font-size: 1.8rem;
+}
+
+footer a {
+  color: black;
+}
+
+@media only screen and (max-width: 1060px) {
+  #prices {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .carousel-slide div,
+  .carousel-slide img {
+    width: 500px;
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  h2 {
+    font-size: 3rem;
+  }
+  #hero {
+    background-image: url("images/tattoo-hands2-tablet.png");
+  }
+  #about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 200vh;
+  }
+  #about1,
+  #about2,
+  #about3 {
+    border-top: 2px #d1b23e solid;
+  }
+  #banner {
+    background-image: url("images/banner-tablet.jpg");
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+  a {
+    font-size: 1rem;
+  }
+  #hero {
+    background-image: url("images/tattoo-hands2-mobile.png");
+  }
+  .carousel-slide div,
+  .carousel-slide img {
+    width: 400px;
+    height: 250px;
+  }
+  #banner {
+    background-image: url("images/banner-mobile.jpg");
+  }
+}
+
+/** Media Queries. 
+Breakpoint 1: 1060
+    - Prices stacked - 1018. DONE
+
+Breakpoint 2: 870    
+    - Gallery section scaled - 870
+    - Hero image - Make new image. DONE
+    - Banner image - make new image. DONE
+    - About stacked - 830. DONE
+    - Hero subtitle - 700. DONE
+
+Breakpoint 3: 600
+    - Nav text smaller - 605 DONE
+    - Hero text - 500 DONE
+ 
+- Gallery images don't fit in frame at 935.
+- Address and map uncentered at 1152. **/
+/*# sourceMappingURL=style.css.map */
