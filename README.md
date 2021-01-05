@@ -2,7 +2,7 @@
 kateeliza.co.uk/wolfSkin.php
 
 ## Introduction
-A fictional one-page site for a tattoo parlour. <br>
+A fictional one-page site for a tattoo parlour, created in July 2020. <br>
 There were multiple aims for this project: 
 * To practice using Sass. 
 * To develop design skills. 
